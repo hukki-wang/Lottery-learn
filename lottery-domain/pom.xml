@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>lottery-domain</artifactId>
+    <artifactId>lottery-learn-domain</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

@@ -9,13 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>lottery-interfaces</artifactId>
+    <artifactId>lottery-learn-interfaces</artifactId>
 
     <packaging>war</packaging>
 
 
     <dependencies>
-        <!--   springboot begin     -->
+        <!--   ++++++++++++++++++springboot begin++++++++++++++++++     -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -25,13 +25,72 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!--   springboot end     -->
+        <!--   dubbo注册中心 begin    -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>nacos-discovery-spring-boot-starter</artifactId>
+        </dependency>
+        <!--   dubbo注册中心 end    -->
+        <!--   mybatis begin     -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!--   mybatis end     -->
+        <!--   ++++++++++++++++++springboot end++++++++++++++++++     -->
 
+        <!--   ++++++++++++++++++tools begin++++++++++++++++++     -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- MapStruct begin -->
+        <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct-processor -->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+        </dependency>
+        <!-- MapStruct end -->
+        <!--   ++++++++++++++++++tools end++++++++++++++++++     -->
+
+        <!--   ++++++++++++++++++business begin++++++++++++++++++     -->
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>lottery-learn-rpc</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--   ++++++++++++++++++business end++++++++++++++++++     -->
     </dependencies>
 
 
     <build>
-        <finalName>Lottery</finalName>
+        <finalName>Lottery-learn</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
